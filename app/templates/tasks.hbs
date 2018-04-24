@@ -1,0 +1,54 @@
+<!-- app/templates/tasks.hbs -->
+{{outlet}}
+{{#each model as |todo|}}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-12">
+      <div class="col-lg-10 col-md-10 col-sm-10 my-auto">
+        <div class="list-group">
+          <div class="jumbotron">
+            {{#if todo.editAt}}
+            <pre>{{todo.text}}</pre>
+            {{else}}
+            <form>
+              <div class="form-group">
+                <span>
+                  {{textarea class="form-control" value=todo.text placeholder="Your task here..."}}
+                </span>
+                <button {{action 'saveTodo' todo.id todo.text}} class="btn-Secondary btn-sm" data-toggle="button">Save</button>
+              </div>
+            </form>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2 my-auto">
+        <button class="btn-light btn-sm btn-block">
+          ID: {{todo.id}}
+        </button>
+        {{#if todo.complete}}
+        <button {{action 'completeTodo' todo.id}} class="btn-success btn-sm btn-block" data-toggle="button">
+          Complete
+        </button>
+        {{else}}
+        <button {{action 'completeTodo' todo.id}} class="btn-danger btn-sm btn-block" data-toggle="button">
+          Incomplete
+        </button>
+        {{/if}}
+        {{#if todo.complete}}{{else}}
+        <button {{action 'editTodo' todo.id}} class="btn-info btn-sm btn-block">
+          Edit
+        </button>
+        {{/if}}
+        <button {{action 'deleteTodo' todo.id}} class="btn-warning btn-sm btn-block">
+          Delete
+        </button>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <br>
+    </div>
+  </div>
+</div>
+{{/each}}
+<br>

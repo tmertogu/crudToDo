@@ -1,0 +1,17 @@
+<!-- app/templates/tasks/new.hbs -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="col-lg-10 col-md-10 col-sm-10">
+          <div class="form-group">
+            <span>{{textarea class="form-control" value=todo placeholder="Add To-Do..."}}</span>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2">
+          <button class="btn-primary btn-sm btn-block"{{action 'addTodo'}}>Add</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

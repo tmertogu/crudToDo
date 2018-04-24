@@ -1,0 +1,40 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gudtodo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{content-for "head"}}
+
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/gudtodo.css">
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDRg9yU3FrQzW8lMeXRr-ExFztaF5FqRPU",
+        authDomain: "gudtechcodingchallenge.firebaseapp.com",
+        databaseURL: "https://gudtechcodingchallenge.firebaseio.com",
+        projectId: "gudtechcodingchallenge",
+        storageBucket: "gudtechcodingchallenge.appspot.com",
+        messagingSenderId: "40530455870"
+      };
+      firebase.initializeApp(config);
+    </script> -->
+
+    <script src="{{rootURL}}assets/vendor.js"></script>
+    <script src="{{rootURL}}assets/gudtodo.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>
