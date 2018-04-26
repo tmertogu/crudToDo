@@ -49,7 +49,7 @@ You will need the following things properly installed on your computer.
 
 ## MySQL configuration
 Install Homebrew on mac by running this in terminal
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"Go to System Prefences (mac) and initialize the db
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 Update Homebrew:
 	brew update
